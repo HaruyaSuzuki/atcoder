@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   interactive_sorting.cpp                            :+:      :+:    :+:   */
+/*   B.cpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hasuzuki <hasuzuki@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/29 16:00:02 by hasuzuki          #+#    #+#             */
-/*   Updated: 2021/09/11 20:41:48 by hasuzuki         ###   ########.fr       */
+/*   Created: 2021/09/11 21:54:08 by hasuzuki          #+#    #+#             */
+/*   Updated: 2021/09/11 21:54:09 by hasuzuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,17 @@ using namespace std;
 
 int		main(void)
 {
-	int	n, j, k;
+	int		arr[26];
+	int		ans;
 
-	cin >> n;
-	for (int i=0;i<n;i++)
+	for (int i=0;i<26;i++)
 	{
-		cin >> j >> k;
+		cin >> arr[i];
 	}
+	for (int i=0;i<26;i++)
+	{
+		ans = arr[i] + 96;
+		cout << char(ans);
+	}
+	return (0);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   interactive_sorting.cpp                            :+:      :+:    :+:   */
+/*   A.cpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hasuzuki <hasuzuki@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/29 16:00:02 by hasuzuki          #+#    #+#             */
-/*   Updated: 2021/09/11 20:41:48 by hasuzuki         ###   ########.fr       */
+/*   Created: 2021/09/11 21:21:39 by hasuzuki          #+#    #+#             */
+/*   Updated: 2021/09/11 21:21:40 by hasuzuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,14 @@ using namespace std;
 
 int		main(void)
 {
-	int	n, j, k;
+	int			N;
+	string	S;
 
-	cin >> n;
-	for (int i=0;i<n;i++)
-	{
-		cin >> j >> k;
-	}
+	cin >> N;
+	cin >> S;
+
+	if (S[N - 1] == 'o') cout << "Yes";
+	else if (S[N - 1] == 'x') cout << "No";
+
+	return (0);
 }
