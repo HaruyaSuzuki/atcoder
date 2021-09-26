@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hasuzuki <hasuzuki@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/18 23:06:12 by hasuzuki          #+#    #+#             */
-/*   Updated: 2021/09/26 23:07:00 by hasuzuki         ###   ########.fr       */
+/*   Created: 2021/09/26 21:47:46 by hasuzuki          #+#    #+#             */
+/*   Updated: 2021/09/26 21:47:47 by hasuzuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,27 @@ using namespace std;
 
 int		main(void)
 {
-	int	X;
+	int	a, b, c;
 
-	cin >> X;
-	if (0 <= X && X < 40) cout << 40 - X;
-	else if (40 <= X && X < 70) cout << 70 - X;
-	else if (70 <= X && X < 90) cout << 90 - X;
-	else if (90 <= X) cout << "expert";
+	cin >> a >> b >> c;
+
+	int	i = c;
+	while (i<=1000)
+	{
+		if (i >= a)
+		{
+			if (i <= b)
+			{
+				cout << i << endl;
+				break;
+			}
+			if (i > b)
+			{
+				cout << -1;
+				break;
+			}
+		}
+		i += c;
+	}
 	return (0);
 }
