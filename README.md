@@ -1,37 +1,36 @@
 # AtCoder
+![](https://img.shields.io/badge/C++-4682b4?style=for-the-badge&logo=cplusplus)
 
-## TL;DR
-C++の勉強としてAtCoderを利用。
-そのため基本的にはC++のみでの実装。
-記法については42同様、norminetteを通しても可能な状態での提出を目指したい。
+Use AtCoder for learning in C++.
+As for the notation, I would like to aim to submit it in a state where it is possible through norminette as well as 42.
 
-## 使用言語
-C++のみ
-
-## 使用コンパイラ
+## Compiler
 GCC
 
-## 入出力
-- 入力に関してはcinを使用。
+## input, output
+- input uses cin
 ```
 cin >> n;
 ```
-- 出力に関してはcoutを使用。
+- output uses cout
 ```
 cout << n;
 ```
 
+## g++ options
+-0, -O0, -O1, -O2, -O3, -Os, -Ofast, -Og
 
-## 高速化メモ
-- コンパイラの自動ベクトル化をサポートさせ、ループ処理をベクトル化し、高速化する。
+
+## Optimization of C++
+- Supports automatic vectorization of the compiler, vectorizes loop processing, and optimization.
 ```
 #pragma GCC target("avx")
 ```
-- g++の最適化オプションには -O -O0 -O1 -O2 -O3 -Os -Ofast -Og があるが、-Ofastは厳格な標準準拠を無視してしまう為、-O3を使用。
+- Use -O3 because -Ofast ignores strict standards compliance.
 ```
 #pragma GCC optimize("O3")
 ```
-- ループの最大回数を分割して減らす（ループ自体の数を増やして、ループ回数を少なくする）コード内のループ回数が多くない時は使用を非推奨。。
+- Divide and reduce the maximum number of loops（Increase the number of loops themselves and decrease the number of loops. Not recommended when the number of loops in the code is not high).
 ```
 #pragma GCC optimize("unroll-loops")
 ```
